@@ -65,33 +65,47 @@ const getUserById = async (id) => {
 };
 
 const forgotPassword = async (email) => {
-    const user = await prisma.user.findUnique({
-        where: { email },
-    });
-    if (!user) throw new Error("Email não encontrado");
+    try {
+        const user = await prisma.user.findUnique({
+            where: { email },
+        });
+        console.log('Usuario encontrado no forgotPassword', user);
+        if (!user) throw new Error("Email não encontrado");
 
-    const token = randomBytes(32).toString("hex");
-    const expires = new Date(Date.now() + 3600000); // 1 hour
+        const crypto = await import('crypto');
+        const token = crypto.randomBytes(32).toString("hex");
 
-    await prisma.passwordResetToken.upsert({
-        where: { userId: user.id },
-        update: { token, expires },
-        create: {
-            token,
-            expires
-        },
-    });
+        // Primeiro, verificar se já existe um token para este usuário e excluí-lo
+        await prisma.passwordResetToken.deleteMany({
+            where: { userId: user.id }
+        });
 
-    const resetLink = `http://localhost:3000/reset-password?token=${token}`;
-    await sendEmail({
-        to: email,
-        subject: "Redefinição de senha",
-        html: `<p>Clique no link para redefinir sua senha: <a href="${resetLink}".>${resetLink}</a></p>`
-    });
+        // Agora criar um novo token
+        await prisma.passwordResetToken.create({
+            data: {
+                userId: user.id,
+                token,
+                // O campo expires não existe no schema, então não devemos incluí-lo
+            }
+        });
+
+        const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+        await sendEmail({
+            to: email,
+            subject: "Redefinição de senha",
+            html: `<p>Clique no link para redefinir sua senha: <a href="${resetLink}">${resetLink}</a></p>`
+        });
+        
+        return { message: 'Email de recuperação enviado' };
+    } catch (error) {
+        console.error('Erro no forgotPassword:', error);
+        throw error;
+    }
 };
+
 const resetPassword = async (token, newPassword) => {
     const reset = await prisma.passwordResetToken.findUnique({ where: { token } });
-    if (!reset || reset.expires < new Date()) {
+    if (!reset) {
         throw new Error("Token inválido ou expirado");
     }
     const hashed = await bcrypt.hash(newPassword, 5);

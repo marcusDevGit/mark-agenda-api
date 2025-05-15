@@ -36,6 +36,7 @@ const getUserById = async (req, res) => {
 };
 
 const forgotPassword = async (req, res) => {
+    console.log('Body recebio', req.body);
     try {
         const { email } = req.body;
         await UserService.forgotPassword(email);
