@@ -154,6 +154,7 @@ exports.Prisma.PasswordResetTokenScalarFieldEnum = {
   id: 'id',
   token: 'token',
   userId: 'userId',
+  expires: 'expires',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };

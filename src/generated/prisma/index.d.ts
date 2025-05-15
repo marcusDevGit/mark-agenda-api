@@ -4685,6 +4685,7 @@ export namespace Prisma {
     id: number | null
     token: string | null
     userId: number | null
+    expires: Date | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -4693,6 +4694,7 @@ export namespace Prisma {
     id: number | null
     token: string | null
     userId: number | null
+    expires: Date | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -4701,6 +4703,7 @@ export namespace Prisma {
     id: number
     token: number
     userId: number
+    expires: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -4721,6 +4724,7 @@ export namespace Prisma {
     id?: true
     token?: true
     userId?: true
+    expires?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -4729,6 +4733,7 @@ export namespace Prisma {
     id?: true
     token?: true
     userId?: true
+    expires?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -4737,6 +4742,7 @@ export namespace Prisma {
     id?: true
     token?: true
     userId?: true
+    expires?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -4832,6 +4838,7 @@ export namespace Prisma {
     id: number
     token: string
     userId: number
+    expires: Date
     createdAt: Date
     updatedAt: Date
     _count: PasswordResetTokenCountAggregateOutputType | null
@@ -4859,6 +4866,7 @@ export namespace Prisma {
     id?: boolean
     token?: boolean
     userId?: boolean
+    expires?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4868,6 +4876,7 @@ export namespace Prisma {
     id?: boolean
     token?: boolean
     userId?: boolean
+    expires?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4877,6 +4886,7 @@ export namespace Prisma {
     id?: boolean
     token?: boolean
     userId?: boolean
+    expires?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4886,11 +4896,12 @@ export namespace Prisma {
     id?: boolean
     token?: boolean
     userId?: boolean
+    expires?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type passwordResetTokenOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "token" | "userId" | "createdAt" | "updatedAt", ExtArgs["result"]["passwordResetToken"]>
+  export type passwordResetTokenOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "token" | "userId" | "expires" | "createdAt" | "updatedAt", ExtArgs["result"]["passwordResetToken"]>
   export type passwordResetTokenInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -4910,6 +4921,7 @@ export namespace Prisma {
       id: number
       token: string
       userId: number
+      expires: Date
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["passwordResetToken"]>
@@ -5339,6 +5351,7 @@ export namespace Prisma {
     readonly id: FieldRef<"passwordResetToken", 'Int'>
     readonly token: FieldRef<"passwordResetToken", 'String'>
     readonly userId: FieldRef<"passwordResetToken", 'Int'>
+    readonly expires: FieldRef<"passwordResetToken", 'DateTime'>
     readonly createdAt: FieldRef<"passwordResetToken", 'DateTime'>
     readonly updatedAt: FieldRef<"passwordResetToken", 'DateTime'>
   }
@@ -5812,6 +5825,7 @@ export namespace Prisma {
     id: 'id',
     token: 'token',
     userId: 'userId',
+    expires: 'expires',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -6135,6 +6149,7 @@ export namespace Prisma {
     id?: IntFilter<"passwordResetToken"> | number
     token?: StringFilter<"passwordResetToken"> | string
     userId?: IntFilter<"passwordResetToken"> | number
+    expires?: DateTimeFilter<"passwordResetToken"> | Date | string
     createdAt?: DateTimeFilter<"passwordResetToken"> | Date | string
     updatedAt?: DateTimeFilter<"passwordResetToken"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -6144,6 +6159,7 @@ export namespace Prisma {
     id?: SortOrder
     token?: SortOrder
     userId?: SortOrder
+    expires?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     user?: UserOrderByWithRelationInput
@@ -6152,19 +6168,21 @@ export namespace Prisma {
   export type passwordResetTokenWhereUniqueInput = Prisma.AtLeast<{
     id?: number
     token?: string
+    userId?: number
     AND?: passwordResetTokenWhereInput | passwordResetTokenWhereInput[]
     OR?: passwordResetTokenWhereInput[]
     NOT?: passwordResetTokenWhereInput | passwordResetTokenWhereInput[]
-    userId?: IntFilter<"passwordResetToken"> | number
+    expires?: DateTimeFilter<"passwordResetToken"> | Date | string
     createdAt?: DateTimeFilter<"passwordResetToken"> | Date | string
     updatedAt?: DateTimeFilter<"passwordResetToken"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-  }, "id" | "token">
+  }, "id" | "token" | "userId">
 
   export type passwordResetTokenOrderByWithAggregationInput = {
     id?: SortOrder
     token?: SortOrder
     userId?: SortOrder
+    expires?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: passwordResetTokenCountOrderByAggregateInput
@@ -6181,6 +6199,7 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"passwordResetToken"> | number
     token?: StringWithAggregatesFilter<"passwordResetToken"> | string
     userId?: IntWithAggregatesFilter<"passwordResetToken"> | number
+    expires?: DateTimeWithAggregatesFilter<"passwordResetToken"> | Date | string
     createdAt?: DateTimeWithAggregatesFilter<"passwordResetToken"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"passwordResetToken"> | Date | string
   }
@@ -6398,6 +6417,7 @@ export namespace Prisma {
 
   export type passwordResetTokenCreateInput = {
     token: string
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
     user: UserCreateNestedOneWithoutPasswordResetTokenInput
@@ -6407,12 +6427,14 @@ export namespace Prisma {
     id?: number
     token: string
     userId: number
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type passwordResetTokenUpdateInput = {
     token?: StringFieldUpdateOperationsInput | string
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPasswordResetTokenNestedInput
@@ -6422,6 +6444,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     token?: StringFieldUpdateOperationsInput | string
     userId?: IntFieldUpdateOperationsInput | number
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6430,12 +6453,14 @@ export namespace Prisma {
     id?: number
     token: string
     userId: number
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type passwordResetTokenUpdateManyMutationInput = {
     token?: StringFieldUpdateOperationsInput | string
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6444,6 +6469,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     token?: StringFieldUpdateOperationsInput | string
     userId?: IntFieldUpdateOperationsInput | number
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6771,6 +6797,7 @@ export namespace Prisma {
     id?: SortOrder
     token?: SortOrder
     userId?: SortOrder
+    expires?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -6784,6 +6811,7 @@ export namespace Prisma {
     id?: SortOrder
     token?: SortOrder
     userId?: SortOrder
+    expires?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -6792,6 +6820,7 @@ export namespace Prisma {
     id?: SortOrder
     token?: SortOrder
     userId?: SortOrder
+    expires?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -7199,6 +7228,7 @@ export namespace Prisma {
 
   export type passwordResetTokenCreateWithoutUserInput = {
     token: string
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -7206,6 +7236,7 @@ export namespace Prisma {
   export type passwordResetTokenUncheckedCreateWithoutUserInput = {
     id?: number
     token: string
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -7272,6 +7303,7 @@ export namespace Prisma {
     id?: IntFilter<"passwordResetToken"> | number
     token?: StringFilter<"passwordResetToken"> | string
     userId?: IntFilter<"passwordResetToken"> | number
+    expires?: DateTimeFilter<"passwordResetToken"> | Date | string
     createdAt?: DateTimeFilter<"passwordResetToken"> | Date | string
     updatedAt?: DateTimeFilter<"passwordResetToken"> | Date | string
   }
@@ -7501,6 +7533,7 @@ export namespace Prisma {
   export type passwordResetTokenCreateManyUserInput = {
     id?: number
     token: string
+    expires?: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -7533,6 +7566,7 @@ export namespace Prisma {
 
   export type passwordResetTokenUpdateWithoutUserInput = {
     token?: StringFieldUpdateOperationsInput | string
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -7540,6 +7574,7 @@ export namespace Prisma {
   export type passwordResetTokenUncheckedUpdateWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     token?: StringFieldUpdateOperationsInput | string
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -7547,6 +7582,7 @@ export namespace Prisma {
   export type passwordResetTokenUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     token?: StringFieldUpdateOperationsInput | string
+    expires?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
