@@ -154,7 +154,66 @@ exports.Prisma.PasswordResetTokenScalarFieldEnum = {
   id: 'id',
   token: 'token',
   userId: 'userId',
-  expires: 'expires',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  expires: 'expires'
+};
+
+exports.Prisma.TeamScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  ownerId: 'ownerId',
+  creatadAt: 'creatadAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.TeamMemberScalarFieldEnum = {
+  id: 'id',
+  teamId: 'teamId',
+  userId: 'userId',
+  role: 'role',
+  creatadAt: 'creatadAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.TeamInviteScalarFieldEnum = {
+  id: 'id',
+  teamId: 'teamId',
+  email: 'email',
+  token: 'token',
+  status: 'status',
+  expiresAt: 'expiresAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlanScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  price: 'price',
+  interval: 'interval',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlanFeatureScalarFieldEnum = {
+  id: 'id',
+  planId: 'planId',
+  name: 'name',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.SubscriptionScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  planId: 'planId',
+  status: 'status',
+  startDate: 'startDate',
+  endDate: 'endDate',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -178,11 +237,41 @@ exports.Role = exports.$Enums.Role = {
   USER: 'USER'
 };
 
+exports.TeamRole = exports.$Enums.TeamRole = {
+  OWNER: 'OWNER',
+  ADMIN: 'ADMIN',
+  MEMBER: 'MEMBER'
+};
+
+exports.InviteStatus = exports.$Enums.InviteStatus = {
+  PENDING: 'PENDING',
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED',
+  EXPIRED: 'EXPIRED'
+};
+
+exports.PlanInterval = exports.$Enums.PlanInterval = {
+  MONTHLY: 'MONTHLY',
+  YEARLY: 'YEARLY'
+};
+
+exports.SubscriptionStatus = exports.$Enums.SubscriptionStatus = {
+  ACTIVE: 'ACTIVE',
+  CANCELED: 'CANCELED',
+  EXPIRED: 'EXPIRED'
+};
+
 exports.Prisma.ModelName = {
   User: 'User',
   Service: 'Service',
   Appointment: 'Appointment',
-  passwordResetToken: 'passwordResetToken'
+  passwordResetToken: 'passwordResetToken',
+  Team: 'Team',
+  TeamMember: 'TeamMember',
+  TeamInvite: 'TeamInvite',
+  Plan: 'Plan',
+  PlanFeature: 'PlanFeature',
+  Subscription: 'Subscription'
 };
 
 /**
