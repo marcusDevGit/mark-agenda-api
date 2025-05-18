@@ -47,7 +47,7 @@ async function main() {
         update: {},
         create: {
             name: 'Consulta Padrão',
-            descriptiom: 'Consulta padrão de 30 minutos',
+            description: 'Consulta padrão de 30 minutos',
             duration: 30,
             price: 100.0
         }
@@ -58,7 +58,7 @@ async function main() {
         update: {},
         create: {
             name: 'Consulta Estendida',
-            descriptiom: 'Consulta estendida de 60 minutos',
+            description: 'Consulta estendida de 60 minutos',
             duration: 60,
             price: 180.0
         }
