@@ -1,6 +1,6 @@
 # Mark Agenda API
 
-Mark Agenda API é uma aplicação backend desenvolvida em Node.js com Express, Prisma e PostgreSQL. O objetivo do projeto é fornecer uma API para gerenciamento de agendamentos, usuários e serviços, permitindo funcionalidades como registro de usuários, autenticação, agendamento de serviços e recuperação de senha.
+A Mark Agenda API é uma plataforma completa para gerenciamento de agendamentos, times e assinaturas. Ela oferece recursos robustos para criar, gerenciar e integrar agendamentos, colaborar em equipes e gerenciar assinaturas de planos.
 
 ## Tecnologias Utilizadas
 
@@ -12,6 +12,7 @@ Mark Agenda API é uma aplicação backend desenvolvida em Node.js com Express, 
 -   **Bcrypt**: Para hashing de senhas.
 -   **Nodemailer**: Para envio de emails (ex.: recuperação de senha).
 -   **Dotenv**: Para gerenciamento de variáveis de ambiente.
+-   **Testes**: Jest para testes unitários e de integração
 
 ## Funcionalidades
 
@@ -30,22 +31,46 @@ Mark Agenda API é uma aplicação backend desenvolvida em Node.js com Express, 
     -   Exclusão de agendamentos.
 
 -   **Gerenciamento de Serviços**:
+
     -   Cadastro de serviços.
     -   Listagem de serviços disponíveis.
+
+-   **Times**
+
+    -   Criação de Times.
+    -   Gerenciamento de Membros.
+    -   Convites.
+
+-   **Planos e Assinaturas**
+    -   Criação de Planos.
+    -   Assinatura de planos por usuários.
+    -   Cancelamento de assinaturas.
+    -   Listagem de planos disponíveis.
 
 ## Estrutura do Projeto
 
 mark-agenda-api/
 ├── prisma/ # Arquivos de configuração do Prisma
-│ └── schema.prisma # Definição do banco de dados
+│   ├── migrations/ # Migrações do banco de dados
+│   └── schema.prisma # Definição do banco de dados
 ├── src/
-│ ├── controllers/ # Controladores das rotas
-│ ├── middlewares/ # Middlewares (ex.: autenticação)
-│ ├── routes/ # Definição das rotas
-│ ├── services/ # Lógica de negócios
-│ ├── utils/ # Utilitários (ex.: envio de email)
-│ └── app.js # Configuração principal do Express
+│   ├── controllers/ # Controladores das rotas
+│   ├── events/ # Sistema de eventos
+│   ├── generated/ # Arquivos gerados pelo Prisma
+│   ├── middlewares/ # Middlewares (ex.: autenticação)
+│   ├── queue/ # Sistema de filas para processamento assíncrono
+│   │   └── jobs/ # Definição de jobs
+│   ├── routes/ # Definição das rotas
+│   ├── services/ # Lógica de negócios
+│   ├── utils/ # Utilitários (ex.: envio de email)
+│   └── app.js # Configuração principal do Express
+├── tests/ # Testes automatizados
+│   ├── __mocks__/ # Mocks para testes
+│   └── setup.js # Configuração dos testes
 ├── .env # Variáveis de ambiente
+├── .env.test # Variáveis de ambiente para testes
+├── index.js # Ponto de entrada da aplicação
+├── jest.config.js # Configuração do Jest
 ├── package.json # Dependências e scripts do projeto
 └── README.md # Documentação do projeto
 
@@ -89,22 +114,57 @@ mark-agenda-api/
 
 -   _Usuarios_
 
-POST /api/routes/user/register: Registrar um novo usuário.
-POST /api/routes/user/login: Login de usuário.
-GET /api/routes/user/profile: Obter perfil do usuário autenticado.
-POST /api/routes/user/forgot-password: Recuperação de senha.
-POST /api/routes/user/reset-password: Redefinição de senha.
+    - POST /api/routes/user/register: Registrar um novo usuário.
+    - POST /api/routes/user/login: Login de usuário.
+    - GET /api/routes/user/profile: Obter perfil do usuário autenticado.
+    - POST /api/routes/user/forgot-password: Recuperação de senha.
+    - POST /api/routes/user/reset-password: Redefinição de senha.
 
 -   _Agendamentos_
 
-POST /api/routes/appointments: Criar agendamento.
-GET /api/routes/appointments/user/:userId: Listar agendamentos de um usuário.
-DELETE /api/routes/appointments/:id: Excluir agendamento.
+    - POST /api/routes/appointments: Criar agendamento.
+    - GET /api/routes/appointments/user/:userId: Listar agendamentos de um usuário.
+    - DELETE /api/routes/appointments/:id: Excluir agendamento.
 
-## Contribuição
+-   _Planos e Assinaturas_
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+    - GET /api/routes/plans: Listar todos os planos disponíveis.
+    - GET /api/routes/plans/:id: Obter detalhes de um plano específico.
+    - POST /api/routes/plans/:id/subscribe: Assinar um plano (requer autenticação).
+    - POST /api/routes/plans/subscriptions/:id/cancel: Cancelar uma assinatura (requer autenticação).
+
+## Testes
+
+Para executar os testes, utilize o comando:
+
+```bash
+npm test
+```
+
+Para executar um arquivo de teste específico:
+
+```bash
+npm test <nome-do-arquivo>
+```
+
+Exemplo:
+
+```bash
+npm test plans.test.js
+```
+
+## Como Contribuir
+
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Faça commit das suas mudanças (`git commit -am 'Adiciona nova feature'`)
+4. Faça push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes. ```
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## Contato
+
+Para dúvidas ou sugestões, entre em contato através de [contato@markagenda.com](mailto:contato@markagenda.com).
