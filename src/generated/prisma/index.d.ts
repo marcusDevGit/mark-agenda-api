@@ -1951,7 +1951,7 @@ export namespace Prisma {
     email: string | null
     password: string | null
     role: $Enums.Role | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -1961,7 +1961,7 @@ export namespace Prisma {
     email: string | null
     password: string | null
     role: $Enums.Role | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -1971,7 +1971,7 @@ export namespace Prisma {
     email: number
     password: number
     role: number
-    creatadAt: number
+    createdAt: number
     updatedAt: number
     _all: number
   }
@@ -1991,7 +1991,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -2001,7 +2001,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -2011,7 +2011,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
     _all?: true
   }
@@ -2108,7 +2108,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
-    creatadAt: Date
+    createdAt: Date
     updatedAt: Date
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
@@ -2137,7 +2137,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     appointments?: boolean | User$appointmentsArgs<ExtArgs>
     subscription?: boolean | User$subscriptionArgs<ExtArgs>
@@ -2153,7 +2153,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -2163,7 +2163,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -2173,11 +2173,11 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "role" | "creatadAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "role" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     appointments?: boolean | User$appointmentsArgs<ExtArgs>
     subscription?: boolean | User$subscriptionArgs<ExtArgs>
@@ -2204,7 +2204,7 @@ export namespace Prisma {
       email: string
       password: string
       role: $Enums.Role
-      creatadAt: Date
+      createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
@@ -2639,7 +2639,7 @@ export namespace Prisma {
     readonly email: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'Role'>
-    readonly creatadAt: FieldRef<"User", 'DateTime'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
     
@@ -3189,30 +3189,30 @@ export namespace Prisma {
   export type ServiceMinAggregateOutputType = {
     id: number | null
     name: string | null
-    descriptiom: string | null
+    description: string | null
     duration: number | null
     price: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
   export type ServiceMaxAggregateOutputType = {
     id: number | null
     name: string | null
-    descriptiom: string | null
+    description: string | null
     duration: number | null
     price: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
   export type ServiceCountAggregateOutputType = {
     id: number
     name: number
-    descriptiom: number
+    description: number
     duration: number
     price: number
-    creatadAt: number
+    createdAt: number
     updatedAt: number
     _all: number
   }
@@ -3233,30 +3233,30 @@ export namespace Prisma {
   export type ServiceMinAggregateInputType = {
     id?: true
     name?: true
-    descriptiom?: true
+    description?: true
     duration?: true
     price?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
   export type ServiceMaxAggregateInputType = {
     id?: true
     name?: true
-    descriptiom?: true
+    description?: true
     duration?: true
     price?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
   export type ServiceCountAggregateInputType = {
     id?: true
     name?: true
-    descriptiom?: true
+    description?: true
     duration?: true
     price?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
     _all?: true
   }
@@ -3350,10 +3350,10 @@ export namespace Prisma {
   export type ServiceGroupByOutputType = {
     id: number
     name: string
-    descriptiom: string | null
+    description: string | null
     duration: number
     price: number
-    creatadAt: Date
+    createdAt: Date
     updatedAt: Date
     _count: ServiceCountAggregateOutputType | null
     _avg: ServiceAvgAggregateOutputType | null
@@ -3379,10 +3379,10 @@ export namespace Prisma {
   export type ServiceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    descriptiom?: boolean
+    description?: boolean
     duration?: boolean
     price?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     appointments?: boolean | Service$appointmentsArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
@@ -3391,34 +3391,34 @@ export namespace Prisma {
   export type ServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    descriptiom?: boolean
+    description?: boolean
     duration?: boolean
     price?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    descriptiom?: boolean
+    description?: boolean
     duration?: boolean
     price?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["service"]>
 
   export type ServiceSelectScalar = {
     id?: boolean
     name?: boolean
-    descriptiom?: boolean
+    description?: boolean
     duration?: boolean
     price?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "descriptiom" | "duration" | "price" | "creatadAt" | "updatedAt", ExtArgs["result"]["service"]>
+  export type ServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "duration" | "price" | "createdAt" | "updatedAt", ExtArgs["result"]["service"]>
   export type ServiceInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     appointments?: boolean | Service$appointmentsArgs<ExtArgs>
     _count?: boolean | ServiceCountOutputTypeDefaultArgs<ExtArgs>
@@ -3434,10 +3434,10 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
-      descriptiom: string | null
+      description: string | null
       duration: number
       price: number
-      creatadAt: Date
+      createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["service"]>
     composites: {}
@@ -3865,10 +3865,10 @@ export namespace Prisma {
   interface ServiceFieldRefs {
     readonly id: FieldRef<"Service", 'Int'>
     readonly name: FieldRef<"Service", 'String'>
-    readonly descriptiom: FieldRef<"Service", 'String'>
+    readonly description: FieldRef<"Service", 'String'>
     readonly duration: FieldRef<"Service", 'Int'>
     readonly price: FieldRef<"Service", 'Float'>
-    readonly creatadAt: FieldRef<"Service", 'DateTime'>
+    readonly createdAt: FieldRef<"Service", 'DateTime'>
     readonly updatedAt: FieldRef<"Service", 'DateTime'>
   }
     
@@ -4330,7 +4330,7 @@ export namespace Prisma {
     notes: string | null
     userId: number | null
     serviceId: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -4340,7 +4340,7 @@ export namespace Prisma {
     notes: string | null
     userId: number | null
     serviceId: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -4350,7 +4350,7 @@ export namespace Prisma {
     notes: number
     userId: number
     serviceId: number
-    creatadAt: number
+    createdAt: number
     updatedAt: number
     _all: number
   }
@@ -4374,7 +4374,7 @@ export namespace Prisma {
     notes?: true
     userId?: true
     serviceId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -4384,7 +4384,7 @@ export namespace Prisma {
     notes?: true
     userId?: true
     serviceId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -4394,7 +4394,7 @@ export namespace Prisma {
     notes?: true
     userId?: true
     serviceId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
     _all?: true
   }
@@ -4491,7 +4491,7 @@ export namespace Prisma {
     notes: string | null
     userId: number
     serviceId: number
-    creatadAt: Date
+    createdAt: Date
     updatedAt: Date
     _count: AppointmentCountAggregateOutputType | null
     _avg: AppointmentAvgAggregateOutputType | null
@@ -4520,7 +4520,7 @@ export namespace Prisma {
     notes?: boolean
     userId?: boolean
     serviceId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     service?: boolean | ServiceDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4532,7 +4532,7 @@ export namespace Prisma {
     notes?: boolean
     userId?: boolean
     serviceId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     service?: boolean | ServiceDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4544,7 +4544,7 @@ export namespace Prisma {
     notes?: boolean
     userId?: boolean
     serviceId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     service?: boolean | ServiceDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4556,11 +4556,11 @@ export namespace Prisma {
     notes?: boolean
     userId?: boolean
     serviceId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type AppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "date" | "notes" | "userId" | "serviceId" | "creatadAt" | "updatedAt", ExtArgs["result"]["appointment"]>
+  export type AppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "date" | "notes" | "userId" | "serviceId" | "createdAt" | "updatedAt", ExtArgs["result"]["appointment"]>
   export type AppointmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     service?: boolean | ServiceDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -4586,7 +4586,7 @@ export namespace Prisma {
       notes: string | null
       userId: number
       serviceId: number
-      creatadAt: Date
+      createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["appointment"]>
     composites: {}
@@ -5018,7 +5018,7 @@ export namespace Prisma {
     readonly notes: FieldRef<"Appointment", 'String'>
     readonly userId: FieldRef<"Appointment", 'Int'>
     readonly serviceId: FieldRef<"Appointment", 'Int'>
-    readonly creatadAt: FieldRef<"Appointment", 'DateTime'>
+    readonly createdAt: FieldRef<"Appointment", 'DateTime'>
     readonly updatedAt: FieldRef<"Appointment", 'DateTime'>
   }
     
@@ -6570,7 +6570,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     ownerId: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -6579,7 +6579,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     ownerId: number | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -6588,7 +6588,7 @@ export namespace Prisma {
     name: number
     description: number
     ownerId: number
-    creatadAt: number
+    createdAt: number
     updatedAt: number
     _all: number
   }
@@ -6609,7 +6609,7 @@ export namespace Prisma {
     name?: true
     description?: true
     ownerId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -6618,7 +6618,7 @@ export namespace Prisma {
     name?: true
     description?: true
     ownerId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -6627,7 +6627,7 @@ export namespace Prisma {
     name?: true
     description?: true
     ownerId?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
     _all?: true
   }
@@ -6723,7 +6723,7 @@ export namespace Prisma {
     name: string
     description: string | null
     ownerId: number
-    creatadAt: Date
+    createdAt: Date
     updatedAt: Date
     _count: TeamCountAggregateOutputType | null
     _avg: TeamAvgAggregateOutputType | null
@@ -6751,7 +6751,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     ownerId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
     invites?: boolean | Team$invitesArgs<ExtArgs>
@@ -6764,7 +6764,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     ownerId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["team"]>
@@ -6774,7 +6774,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     ownerId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["team"]>
@@ -6784,11 +6784,11 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     ownerId?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type TeamOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "ownerId" | "creatadAt" | "updatedAt", ExtArgs["result"]["team"]>
+  export type TeamOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "ownerId" | "createdAt" | "updatedAt", ExtArgs["result"]["team"]>
   export type TeamInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     owner?: boolean | UserDefaultArgs<ExtArgs>
     invites?: boolean | Team$invitesArgs<ExtArgs>
@@ -6814,7 +6814,7 @@ export namespace Prisma {
       name: string
       description: string | null
       ownerId: number
-      creatadAt: Date
+      createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["team"]>
     composites: {}
@@ -7246,7 +7246,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Team", 'String'>
     readonly description: FieldRef<"Team", 'String'>
     readonly ownerId: FieldRef<"Team", 'Int'>
-    readonly creatadAt: FieldRef<"Team", 'DateTime'>
+    readonly createdAt: FieldRef<"Team", 'DateTime'>
     readonly updatedAt: FieldRef<"Team", 'DateTime'>
   }
     
@@ -7739,7 +7739,7 @@ export namespace Prisma {
     teamId: number | null
     userId: number | null
     role: $Enums.TeamRole | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -7748,7 +7748,7 @@ export namespace Prisma {
     teamId: number | null
     userId: number | null
     role: $Enums.TeamRole | null
-    creatadAt: Date | null
+    createdAt: Date | null
     updatedAt: Date | null
   }
 
@@ -7757,7 +7757,7 @@ export namespace Prisma {
     teamId: number
     userId: number
     role: number
-    creatadAt: number
+    createdAt: number
     updatedAt: number
     _all: number
   }
@@ -7780,7 +7780,7 @@ export namespace Prisma {
     teamId?: true
     userId?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -7789,7 +7789,7 @@ export namespace Prisma {
     teamId?: true
     userId?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
   }
 
@@ -7798,7 +7798,7 @@ export namespace Prisma {
     teamId?: true
     userId?: true
     role?: true
-    creatadAt?: true
+    createdAt?: true
     updatedAt?: true
     _all?: true
   }
@@ -7894,7 +7894,7 @@ export namespace Prisma {
     teamId: number
     userId: number
     role: $Enums.TeamRole
-    creatadAt: Date
+    createdAt: Date
     updatedAt: Date
     _count: TeamMemberCountAggregateOutputType | null
     _avg: TeamMemberAvgAggregateOutputType | null
@@ -7922,7 +7922,7 @@ export namespace Prisma {
     teamId?: boolean
     userId?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     team?: boolean | TeamDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -7933,7 +7933,7 @@ export namespace Prisma {
     teamId?: boolean
     userId?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     team?: boolean | TeamDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -7944,7 +7944,7 @@ export namespace Prisma {
     teamId?: boolean
     userId?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
     team?: boolean | TeamDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -7955,11 +7955,11 @@ export namespace Prisma {
     teamId?: boolean
     userId?: boolean
     role?: boolean
-    creatadAt?: boolean
+    createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type TeamMemberOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "teamId" | "userId" | "role" | "creatadAt" | "updatedAt", ExtArgs["result"]["teamMember"]>
+  export type TeamMemberOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "teamId" | "userId" | "role" | "createdAt" | "updatedAt", ExtArgs["result"]["teamMember"]>
   export type TeamMemberInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     team?: boolean | TeamDefaultArgs<ExtArgs>
     user?: boolean | UserDefaultArgs<ExtArgs>
@@ -7984,7 +7984,7 @@ export namespace Prisma {
       teamId: number
       userId: number
       role: $Enums.TeamRole
-      creatadAt: Date
+      createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["teamMember"]>
     composites: {}
@@ -8415,7 +8415,7 @@ export namespace Prisma {
     readonly teamId: FieldRef<"TeamMember", 'Int'>
     readonly userId: FieldRef<"TeamMember", 'Int'>
     readonly role: FieldRef<"TeamMember", 'TeamRole'>
-    readonly creatadAt: FieldRef<"TeamMember", 'DateTime'>
+    readonly createdAt: FieldRef<"TeamMember", 'DateTime'>
     readonly updatedAt: FieldRef<"TeamMember", 'DateTime'>
   }
     
@@ -13404,7 +13404,7 @@ export namespace Prisma {
     email: 'email',
     password: 'password',
     role: 'role',
-    creatadAt: 'creatadAt',
+    createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
@@ -13414,10 +13414,10 @@ export namespace Prisma {
   export const ServiceScalarFieldEnum: {
     id: 'id',
     name: 'name',
-    descriptiom: 'descriptiom',
+    description: 'description',
     duration: 'duration',
     price: 'price',
-    creatadAt: 'creatadAt',
+    createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
@@ -13430,7 +13430,7 @@ export namespace Prisma {
     notes: 'notes',
     userId: 'userId',
     serviceId: 'serviceId',
-    creatadAt: 'creatadAt',
+    createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
@@ -13454,7 +13454,7 @@ export namespace Prisma {
     name: 'name',
     description: 'description',
     ownerId: 'ownerId',
-    creatadAt: 'creatadAt',
+    createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
@@ -13466,7 +13466,7 @@ export namespace Prisma {
     teamId: 'teamId',
     userId: 'userId',
     role: 'role',
-    creatadAt: 'creatadAt',
+    createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
 
@@ -13693,7 +13693,7 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
-    creatadAt?: DateTimeFilter<"User"> | Date | string
+    createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     appointments?: AppointmentListRelationFilter
     subscription?: SubscriptionListRelationFilter
@@ -13708,7 +13708,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     appointments?: AppointmentOrderByRelationAggregateInput
     subscription?: SubscriptionOrderByRelationAggregateInput
@@ -13726,7 +13726,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
-    creatadAt?: DateTimeFilter<"User"> | Date | string
+    createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     appointments?: AppointmentListRelationFilter
     subscription?: SubscriptionListRelationFilter
@@ -13741,7 +13741,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
@@ -13759,7 +13759,7 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
     role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
-    creatadAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
@@ -13769,10 +13769,10 @@ export namespace Prisma {
     NOT?: ServiceWhereInput | ServiceWhereInput[]
     id?: IntFilter<"Service"> | number
     name?: StringFilter<"Service"> | string
-    descriptiom?: StringNullableFilter<"Service"> | string | null
+    description?: StringNullableFilter<"Service"> | string | null
     duration?: IntFilter<"Service"> | number
     price?: FloatFilter<"Service"> | number
-    creatadAt?: DateTimeFilter<"Service"> | Date | string
+    createdAt?: DateTimeFilter<"Service"> | Date | string
     updatedAt?: DateTimeFilter<"Service"> | Date | string
     appointments?: AppointmentListRelationFilter
   }
@@ -13780,10 +13780,10 @@ export namespace Prisma {
   export type ServiceOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    descriptiom?: SortOrderInput | SortOrder
+    description?: SortOrderInput | SortOrder
     duration?: SortOrder
     price?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     appointments?: AppointmentOrderByRelationAggregateInput
   }
@@ -13794,10 +13794,10 @@ export namespace Prisma {
     OR?: ServiceWhereInput[]
     NOT?: ServiceWhereInput | ServiceWhereInput[]
     name?: StringFilter<"Service"> | string
-    descriptiom?: StringNullableFilter<"Service"> | string | null
+    description?: StringNullableFilter<"Service"> | string | null
     duration?: IntFilter<"Service"> | number
     price?: FloatFilter<"Service"> | number
-    creatadAt?: DateTimeFilter<"Service"> | Date | string
+    createdAt?: DateTimeFilter<"Service"> | Date | string
     updatedAt?: DateTimeFilter<"Service"> | Date | string
     appointments?: AppointmentListRelationFilter
   }, "id">
@@ -13805,10 +13805,10 @@ export namespace Prisma {
   export type ServiceOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    descriptiom?: SortOrderInput | SortOrder
+    description?: SortOrderInput | SortOrder
     duration?: SortOrder
     price?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: ServiceCountOrderByAggregateInput
     _avg?: ServiceAvgOrderByAggregateInput
@@ -13823,10 +13823,10 @@ export namespace Prisma {
     NOT?: ServiceScalarWhereWithAggregatesInput | ServiceScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Service"> | number
     name?: StringWithAggregatesFilter<"Service"> | string
-    descriptiom?: StringNullableWithAggregatesFilter<"Service"> | string | null
+    description?: StringNullableWithAggregatesFilter<"Service"> | string | null
     duration?: IntWithAggregatesFilter<"Service"> | number
     price?: FloatWithAggregatesFilter<"Service"> | number
-    creatadAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Service"> | Date | string
   }
 
@@ -13839,7 +13839,7 @@ export namespace Prisma {
     notes?: StringNullableFilter<"Appointment"> | string | null
     userId?: IntFilter<"Appointment"> | number
     serviceId?: IntFilter<"Appointment"> | number
-    creatadAt?: DateTimeFilter<"Appointment"> | Date | string
+    createdAt?: DateTimeFilter<"Appointment"> | Date | string
     updatedAt?: DateTimeFilter<"Appointment"> | Date | string
     service?: XOR<ServiceScalarRelationFilter, ServiceWhereInput>
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -13851,7 +13851,7 @@ export namespace Prisma {
     notes?: SortOrderInput | SortOrder
     userId?: SortOrder
     serviceId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     service?: ServiceOrderByWithRelationInput
     user?: UserOrderByWithRelationInput
@@ -13866,7 +13866,7 @@ export namespace Prisma {
     notes?: StringNullableFilter<"Appointment"> | string | null
     userId?: IntFilter<"Appointment"> | number
     serviceId?: IntFilter<"Appointment"> | number
-    creatadAt?: DateTimeFilter<"Appointment"> | Date | string
+    createdAt?: DateTimeFilter<"Appointment"> | Date | string
     updatedAt?: DateTimeFilter<"Appointment"> | Date | string
     service?: XOR<ServiceScalarRelationFilter, ServiceWhereInput>
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -13878,7 +13878,7 @@ export namespace Prisma {
     notes?: SortOrderInput | SortOrder
     userId?: SortOrder
     serviceId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: AppointmentCountOrderByAggregateInput
     _avg?: AppointmentAvgOrderByAggregateInput
@@ -13896,7 +13896,7 @@ export namespace Prisma {
     notes?: StringNullableWithAggregatesFilter<"Appointment"> | string | null
     userId?: IntWithAggregatesFilter<"Appointment"> | number
     serviceId?: IntWithAggregatesFilter<"Appointment"> | number
-    creatadAt?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Appointment"> | Date | string
   }
 
@@ -13970,7 +13970,7 @@ export namespace Prisma {
     name?: StringFilter<"Team"> | string
     description?: StringNullableFilter<"Team"> | string | null
     ownerId?: IntFilter<"Team"> | number
-    creatadAt?: DateTimeFilter<"Team"> | Date | string
+    createdAt?: DateTimeFilter<"Team"> | Date | string
     updatedAt?: DateTimeFilter<"Team"> | Date | string
     owner?: XOR<UserScalarRelationFilter, UserWhereInput>
     invites?: TeamInviteListRelationFilter
@@ -13982,7 +13982,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     ownerId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     owner?: UserOrderByWithRelationInput
     invites?: TeamInviteOrderByRelationAggregateInput
@@ -13997,7 +13997,7 @@ export namespace Prisma {
     name?: StringFilter<"Team"> | string
     description?: StringNullableFilter<"Team"> | string | null
     ownerId?: IntFilter<"Team"> | number
-    creatadAt?: DateTimeFilter<"Team"> | Date | string
+    createdAt?: DateTimeFilter<"Team"> | Date | string
     updatedAt?: DateTimeFilter<"Team"> | Date | string
     owner?: XOR<UserScalarRelationFilter, UserWhereInput>
     invites?: TeamInviteListRelationFilter
@@ -14009,7 +14009,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     ownerId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: TeamCountOrderByAggregateInput
     _avg?: TeamAvgOrderByAggregateInput
@@ -14026,7 +14026,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Team"> | string
     description?: StringNullableWithAggregatesFilter<"Team"> | string | null
     ownerId?: IntWithAggregatesFilter<"Team"> | number
-    creatadAt?: DateTimeWithAggregatesFilter<"Team"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"Team"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Team"> | Date | string
   }
 
@@ -14038,7 +14038,7 @@ export namespace Prisma {
     teamId?: IntFilter<"TeamMember"> | number
     userId?: IntFilter<"TeamMember"> | number
     role?: EnumTeamRoleFilter<"TeamMember"> | $Enums.TeamRole
-    creatadAt?: DateTimeFilter<"TeamMember"> | Date | string
+    createdAt?: DateTimeFilter<"TeamMember"> | Date | string
     updatedAt?: DateTimeFilter<"TeamMember"> | Date | string
     team?: XOR<TeamScalarRelationFilter, TeamWhereInput>
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -14049,7 +14049,7 @@ export namespace Prisma {
     teamId?: SortOrder
     userId?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     team?: TeamOrderByWithRelationInput
     user?: UserOrderByWithRelationInput
@@ -14064,7 +14064,7 @@ export namespace Prisma {
     teamId?: IntFilter<"TeamMember"> | number
     userId?: IntFilter<"TeamMember"> | number
     role?: EnumTeamRoleFilter<"TeamMember"> | $Enums.TeamRole
-    creatadAt?: DateTimeFilter<"TeamMember"> | Date | string
+    createdAt?: DateTimeFilter<"TeamMember"> | Date | string
     updatedAt?: DateTimeFilter<"TeamMember"> | Date | string
     team?: XOR<TeamScalarRelationFilter, TeamWhereInput>
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -14075,7 +14075,7 @@ export namespace Prisma {
     teamId?: SortOrder
     userId?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: TeamMemberCountOrderByAggregateInput
     _avg?: TeamMemberAvgOrderByAggregateInput
@@ -14092,7 +14092,7 @@ export namespace Prisma {
     teamId?: IntWithAggregatesFilter<"TeamMember"> | number
     userId?: IntWithAggregatesFilter<"TeamMember"> | number
     role?: EnumTeamRoleWithAggregatesFilter<"TeamMember"> | $Enums.TeamRole
-    creatadAt?: DateTimeWithAggregatesFilter<"TeamMember"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"TeamMember"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"TeamMember"> | Date | string
   }
 
@@ -14380,7 +14380,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutUserInput
     subscription?: SubscriptionCreateNestedManyWithoutUserInput
@@ -14395,7 +14395,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutUserInput
     subscription?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
@@ -14409,7 +14409,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUpdateManyWithoutUserNestedInput
@@ -14424,7 +14424,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
@@ -14439,7 +14439,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -14448,7 +14448,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14458,16 +14458,16 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceCreateInput = {
     name: string
-    descriptiom?: string | null
+    description?: string | null
     duration: number
     price: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutServiceInput
   }
@@ -14475,20 +14475,20 @@ export namespace Prisma {
   export type ServiceUncheckedCreateInput = {
     id?: number
     name: string
-    descriptiom?: string | null
+    description?: string | null
     duration: number
     price: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutServiceInput
   }
 
   export type ServiceUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutServiceNestedInput
   }
@@ -14496,10 +14496,10 @@ export namespace Prisma {
   export type ServiceUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutServiceNestedInput
   }
@@ -14507,36 +14507,36 @@ export namespace Prisma {
   export type ServiceCreateManyInput = {
     id?: number
     name: string
-    descriptiom?: string | null
+    description?: string | null
     duration: number
     price: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type ServiceUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AppointmentCreateInput = {
     date: Date | string
     notes?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     service: ServiceCreateNestedOneWithoutAppointmentsInput
     user: UserCreateNestedOneWithoutAppointmentsInput
@@ -14548,14 +14548,14 @@ export namespace Prisma {
     notes?: string | null
     userId: number
     serviceId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type AppointmentUpdateInput = {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     service?: ServiceUpdateOneRequiredWithoutAppointmentsNestedInput
     user?: UserUpdateOneRequiredWithoutAppointmentsNestedInput
@@ -14567,7 +14567,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: IntFieldUpdateOperationsInput | number
     serviceId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14577,14 +14577,14 @@ export namespace Prisma {
     notes?: string | null
     userId: number
     serviceId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type AppointmentUpdateManyMutationInput = {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14594,7 +14594,7 @@ export namespace Prisma {
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: IntFieldUpdateOperationsInput | number
     serviceId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14660,7 +14660,7 @@ export namespace Prisma {
   export type TeamCreateInput = {
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutOwnedTeamsInput
     invites?: TeamInviteCreateNestedManyWithoutTeamInput
@@ -14672,7 +14672,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     ownerId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     invites?: TeamInviteUncheckedCreateNestedManyWithoutTeamInput
     members?: TeamMemberUncheckedCreateNestedManyWithoutTeamInput
@@ -14681,7 +14681,7 @@ export namespace Prisma {
   export type TeamUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutOwnedTeamsNestedInput
     invites?: TeamInviteUpdateManyWithoutTeamNestedInput
@@ -14693,7 +14693,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     ownerId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     invites?: TeamInviteUncheckedUpdateManyWithoutTeamNestedInput
     members?: TeamMemberUncheckedUpdateManyWithoutTeamNestedInput
@@ -14704,14 +14704,14 @@ export namespace Prisma {
     name: string
     description?: string | null
     ownerId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type TeamUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14720,13 +14720,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     ownerId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TeamMemberCreateInput = {
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     team: TeamCreateNestedOneWithoutMembersInput
     user: UserCreateNestedOneWithoutTeamMembershipsInput
@@ -14737,13 +14737,13 @@ export namespace Prisma {
     teamId: number
     userId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type TeamMemberUpdateInput = {
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     team?: TeamUpdateOneRequiredWithoutMembersNestedInput
     user?: UserUpdateOneRequiredWithoutTeamMembershipsNestedInput
@@ -14754,7 +14754,7 @@ export namespace Prisma {
     teamId?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14763,13 +14763,13 @@ export namespace Prisma {
     teamId: number
     userId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type TeamMemberUpdateManyMutationInput = {
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14778,7 +14778,7 @@ export namespace Prisma {
     teamId?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -15156,7 +15156,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15170,7 +15170,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15180,7 +15180,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15280,10 +15280,10 @@ export namespace Prisma {
   export type ServiceCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    descriptiom?: SortOrder
+    description?: SortOrder
     duration?: SortOrder
     price?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15296,20 +15296,20 @@ export namespace Prisma {
   export type ServiceMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    descriptiom?: SortOrder
+    description?: SortOrder
     duration?: SortOrder
     price?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
   export type ServiceMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    descriptiom?: SortOrder
+    description?: SortOrder
     duration?: SortOrder
     price?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15369,7 +15369,7 @@ export namespace Prisma {
     notes?: SortOrder
     userId?: SortOrder
     serviceId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15385,7 +15385,7 @@ export namespace Prisma {
     notes?: SortOrder
     userId?: SortOrder
     serviceId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15395,7 +15395,7 @@ export namespace Prisma {
     notes?: SortOrder
     userId?: SortOrder
     serviceId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15457,7 +15457,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     ownerId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15471,7 +15471,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     ownerId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15480,7 +15480,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     ownerId?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15511,7 +15511,7 @@ export namespace Prisma {
     teamId?: SortOrder
     userId?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15526,7 +15526,7 @@ export namespace Prisma {
     teamId?: SortOrder
     userId?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -15535,7 +15535,7 @@ export namespace Prisma {
     teamId?: SortOrder
     userId?: SortOrder
     role?: SortOrder
-    creatadAt?: SortOrder
+    createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
@@ -16678,7 +16678,7 @@ export namespace Prisma {
   export type AppointmentCreateWithoutUserInput = {
     date: Date | string
     notes?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     service: ServiceCreateNestedOneWithoutAppointmentsInput
   }
@@ -16688,7 +16688,7 @@ export namespace Prisma {
     date: Date | string
     notes?: string | null
     serviceId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -16734,7 +16734,7 @@ export namespace Prisma {
   export type TeamCreateWithoutOwnerInput = {
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     invites?: TeamInviteCreateNestedManyWithoutTeamInput
     members?: TeamMemberCreateNestedManyWithoutTeamInput
@@ -16744,7 +16744,7 @@ export namespace Prisma {
     id?: number
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     invites?: TeamInviteUncheckedCreateNestedManyWithoutTeamInput
     members?: TeamMemberUncheckedCreateNestedManyWithoutTeamInput
@@ -16762,7 +16762,7 @@ export namespace Prisma {
 
   export type TeamMemberCreateWithoutUserInput = {
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     team: TeamCreateNestedOneWithoutMembersInput
   }
@@ -16771,7 +16771,7 @@ export namespace Prisma {
     id?: number
     teamId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -16830,7 +16830,7 @@ export namespace Prisma {
     notes?: StringNullableFilter<"Appointment"> | string | null
     userId?: IntFilter<"Appointment"> | number
     serviceId?: IntFilter<"Appointment"> | number
-    creatadAt?: DateTimeFilter<"Appointment"> | Date | string
+    createdAt?: DateTimeFilter<"Appointment"> | Date | string
     updatedAt?: DateTimeFilter<"Appointment"> | Date | string
   }
 
@@ -16888,7 +16888,7 @@ export namespace Prisma {
     name?: StringFilter<"Team"> | string
     description?: StringNullableFilter<"Team"> | string | null
     ownerId?: IntFilter<"Team"> | number
-    creatadAt?: DateTimeFilter<"Team"> | Date | string
+    createdAt?: DateTimeFilter<"Team"> | Date | string
     updatedAt?: DateTimeFilter<"Team"> | Date | string
   }
 
@@ -16916,7 +16916,7 @@ export namespace Prisma {
     teamId?: IntFilter<"TeamMember"> | number
     userId?: IntFilter<"TeamMember"> | number
     role?: EnumTeamRoleFilter<"TeamMember"> | $Enums.TeamRole
-    creatadAt?: DateTimeFilter<"TeamMember"> | Date | string
+    createdAt?: DateTimeFilter<"TeamMember"> | Date | string
     updatedAt?: DateTimeFilter<"TeamMember"> | Date | string
   }
 
@@ -16949,7 +16949,7 @@ export namespace Prisma {
   export type AppointmentCreateWithoutServiceInput = {
     date: Date | string
     notes?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     user: UserCreateNestedOneWithoutAppointmentsInput
   }
@@ -16959,7 +16959,7 @@ export namespace Prisma {
     date: Date | string
     notes?: string | null
     userId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -16991,20 +16991,20 @@ export namespace Prisma {
 
   export type ServiceCreateWithoutAppointmentsInput = {
     name: string
-    descriptiom?: string | null
+    description?: string | null
     duration: number
     price: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type ServiceUncheckedCreateWithoutAppointmentsInput = {
     id?: number
     name: string
-    descriptiom?: string | null
+    description?: string | null
     duration: number
     price: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -17018,7 +17018,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     subscription?: SubscriptionCreateNestedManyWithoutUserInput
     ownedTeams?: TeamCreateNestedManyWithoutOwnerInput
@@ -17032,7 +17032,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     subscription?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
     ownedTeams?: TeamUncheckedCreateNestedManyWithoutOwnerInput
@@ -17058,20 +17058,20 @@ export namespace Prisma {
 
   export type ServiceUpdateWithoutAppointmentsInput = {
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ServiceUncheckedUpdateWithoutAppointmentsInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    descriptiom?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     duration?: IntFieldUpdateOperationsInput | number
     price?: FloatFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17091,7 +17091,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUpdateManyWithoutUserNestedInput
     ownedTeams?: TeamUpdateManyWithoutOwnerNestedInput
@@ -17105,7 +17105,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
     ownedTeams?: TeamUncheckedUpdateManyWithoutOwnerNestedInput
@@ -17118,7 +17118,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutUserInput
     subscription?: SubscriptionCreateNestedManyWithoutUserInput
@@ -17132,7 +17132,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutUserInput
     subscription?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
@@ -17161,7 +17161,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUpdateManyWithoutUserNestedInput
@@ -17175,7 +17175,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
@@ -17188,7 +17188,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutUserInput
     subscription?: SubscriptionCreateNestedManyWithoutUserInput
@@ -17202,7 +17202,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutUserInput
     subscription?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
@@ -17246,7 +17246,7 @@ export namespace Prisma {
 
   export type TeamMemberCreateWithoutTeamInput = {
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     user: UserCreateNestedOneWithoutTeamMembershipsInput
   }
@@ -17255,7 +17255,7 @@ export namespace Prisma {
     id?: number
     userId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -17285,7 +17285,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUpdateManyWithoutUserNestedInput
@@ -17299,7 +17299,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
@@ -17356,7 +17356,7 @@ export namespace Prisma {
   export type TeamCreateWithoutMembersInput = {
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutOwnedTeamsInput
     invites?: TeamInviteCreateNestedManyWithoutTeamInput
@@ -17367,7 +17367,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     ownerId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     invites?: TeamInviteUncheckedCreateNestedManyWithoutTeamInput
   }
@@ -17382,7 +17382,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutUserInput
     subscription?: SubscriptionCreateNestedManyWithoutUserInput
@@ -17396,7 +17396,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutUserInput
     subscription?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
@@ -17423,7 +17423,7 @@ export namespace Prisma {
   export type TeamUpdateWithoutMembersInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutOwnedTeamsNestedInput
     invites?: TeamInviteUpdateManyWithoutTeamNestedInput
@@ -17434,7 +17434,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     ownerId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     invites?: TeamInviteUncheckedUpdateManyWithoutTeamNestedInput
   }
@@ -17455,7 +17455,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUpdateManyWithoutUserNestedInput
@@ -17469,7 +17469,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutUserNestedInput
     subscription?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
@@ -17480,7 +17480,7 @@ export namespace Prisma {
   export type TeamCreateWithoutInvitesInput = {
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutOwnedTeamsInput
     members?: TeamMemberCreateNestedManyWithoutTeamInput
@@ -17491,7 +17491,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     ownerId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     members?: TeamMemberUncheckedCreateNestedManyWithoutTeamInput
   }
@@ -17515,7 +17515,7 @@ export namespace Prisma {
   export type TeamUpdateWithoutInvitesInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutOwnedTeamsNestedInput
     members?: TeamMemberUpdateManyWithoutTeamNestedInput
@@ -17526,7 +17526,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     ownerId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     members?: TeamMemberUncheckedUpdateManyWithoutTeamNestedInput
   }
@@ -17718,7 +17718,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentCreateNestedManyWithoutUserInput
     ownedTeams?: TeamCreateNestedManyWithoutOwnerInput
@@ -17732,7 +17732,7 @@ export namespace Prisma {
     email: string
     password: string
     role?: $Enums.Role
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
     appointments?: AppointmentUncheckedCreateNestedManyWithoutUserInput
     ownedTeams?: TeamUncheckedCreateNestedManyWithoutOwnerInput
@@ -17793,7 +17793,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUpdateManyWithoutUserNestedInput
     ownedTeams?: TeamUpdateManyWithoutOwnerNestedInput
@@ -17807,7 +17807,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     appointments?: AppointmentUncheckedUpdateManyWithoutUserNestedInput
     ownedTeams?: TeamUncheckedUpdateManyWithoutOwnerNestedInput
@@ -17820,7 +17820,7 @@ export namespace Prisma {
     date: Date | string
     notes?: string | null
     serviceId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -17838,7 +17838,7 @@ export namespace Prisma {
     id?: number
     name: string
     description?: string | null
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -17846,14 +17846,14 @@ export namespace Prisma {
     id?: number
     teamId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type AppointmentUpdateWithoutUserInput = {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     service?: ServiceUpdateOneRequiredWithoutAppointmentsNestedInput
   }
@@ -17863,7 +17863,7 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     serviceId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17872,7 +17872,7 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     serviceId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17908,7 +17908,7 @@ export namespace Prisma {
   export type TeamUpdateWithoutOwnerInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     invites?: TeamInviteUpdateManyWithoutTeamNestedInput
     members?: TeamMemberUpdateManyWithoutTeamNestedInput
@@ -17918,7 +17918,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     invites?: TeamInviteUncheckedUpdateManyWithoutTeamNestedInput
     members?: TeamMemberUncheckedUpdateManyWithoutTeamNestedInput
@@ -17928,13 +17928,13 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TeamMemberUpdateWithoutUserInput = {
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     team?: TeamUpdateOneRequiredWithoutMembersNestedInput
   }
@@ -17943,7 +17943,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     teamId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17951,7 +17951,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     teamId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17960,14 +17960,14 @@ export namespace Prisma {
     date: Date | string
     notes?: string | null
     userId: number
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type AppointmentUpdateWithoutServiceInput = {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutAppointmentsNestedInput
   }
@@ -17977,7 +17977,7 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -17986,7 +17986,7 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     notes?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: IntFieldUpdateOperationsInput | number
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -18004,7 +18004,7 @@ export namespace Prisma {
     id?: number
     userId: number
     role?: $Enums.TeamRole
-    creatadAt?: Date | string
+    createdAt?: Date | string
     updatedAt?: Date | string
   }
 
@@ -18039,7 +18039,7 @@ export namespace Prisma {
 
   export type TeamMemberUpdateWithoutTeamInput = {
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutTeamMembershipsNestedInput
   }
@@ -18048,7 +18048,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -18056,7 +18056,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     role?: EnumTeamRoleFieldUpdateOperationsInput | $Enums.TeamRole
-    creatadAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

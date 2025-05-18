@@ -14,7 +14,7 @@ model User {
   email              String              @unique
   password           String
   role               Role                @default(USER)
-  creatadAt          DateTime            @default(now())
+  createdAt          DateTime            @default(now())
   updatedAt          DateTime            @updatedAt
   appointments       Appointment[]
   subscription       Subscription[]
@@ -26,10 +26,10 @@ model User {
 model Service {
   id           Int           @id @default(autoincrement())
   name         String
-  descriptiom  String?
+  description  String?
   duration     Int
   price        Float
-  creatadAt    DateTime      @default(now())
+  createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
   appointments Appointment[]
 }
@@ -40,7 +40,7 @@ model Appointment {
   notes     String?
   userId    Int
   serviceId Int
-  creatadAt DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   service   Service  @relation(fields: [serviceId], references: [id])
   user      User     @relation(fields: [userId], references: [id])
@@ -61,7 +61,7 @@ model Team {
   name        String
   description String?
   ownerId     Int
-  creatadAt   DateTime     @default(now())
+  createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
   owner       User         @relation("TeamOwner", fields: [ownerId], references: [id])
   invites     TeamInvite[]
@@ -73,7 +73,7 @@ model TeamMember {
   teamId    Int
   userId    Int
   role      TeamRole @default(MEMBER)
-  creatadAt DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   team      Team     @relation(fields: [teamId], references: [id])
   user      User     @relation(fields: [userId], references: [id])

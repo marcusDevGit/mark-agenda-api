@@ -126,17 +126,17 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   password: 'password',
   role: 'role',
-  creatadAt: 'creatadAt',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  descriptiom: 'descriptiom',
+  description: 'description',
   duration: 'duration',
   price: 'price',
-  creatadAt: 'creatadAt',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
@@ -146,7 +146,7 @@ exports.Prisma.AppointmentScalarFieldEnum = {
   notes: 'notes',
   userId: 'userId',
   serviceId: 'serviceId',
-  creatadAt: 'creatadAt',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
@@ -164,7 +164,7 @@ exports.Prisma.TeamScalarFieldEnum = {
   name: 'name',
   description: 'description',
   ownerId: 'ownerId',
-  creatadAt: 'creatadAt',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
@@ -173,7 +173,7 @@ exports.Prisma.TeamMemberScalarFieldEnum = {
   teamId: 'teamId',
   userId: 'userId',
   role: 'role',
-  creatadAt: 'creatadAt',
+  createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
 
