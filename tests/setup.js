@@ -1,7 +1,7 @@
 import { PrismaClient } from '../src/generated/prisma/client.js';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config({ path: '.env.test' });
 
 const prisma = new PrismaClient();
 
@@ -9,9 +9,35 @@ const prisma = new PrismaClient();
 export const clearDatabase = async () => {
     // Limpar tabelas relacionadas a times
     try {
-        await prisma.teamInvite.deleteMany({});
-        await prisma.teamMember.deleteMany({});
-        await prisma.team.deleteMany({});
+        // Verificar se as tabelas existem antes de tentar excluir
+        const tableExists = async (tableName) => {
+            try {
+                await prisma.$queryRaw`SELECT 1 FROM information_schema.tables WHERE table_name = ${tableName}`;
+                return true;
+            } catch (error) {
+                return false;
+            }
+        };
+
+        // Limpar apenas se as tabelas existirem
+        if (await tableExists('TeamInvite')) {
+            await prisma.teamInvite.deleteMany({});
+        }
+        if (await tableExists('TeamMember')) {
+            await prisma.teamMember.deleteMany({});
+        }
+        if (await tableExists('Team')) {
+            await prisma.team.deleteMany({});
+        }
+        if (await tableExists('Subscription')) {
+            await prisma.subscription.deleteMany({});
+        }
+        if (await tableExists('PlanFeature')) {
+            await prisma.planFeature.deleteMany({});
+        }
+        if (await tableExists('Plan')) {
+            await prisma.plan.deleteMany({});
+        }
     } catch (error) {
         console.log('Erro ao limpar tabelas de times:', error.message);
     }

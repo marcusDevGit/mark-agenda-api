@@ -1,0 +1,25 @@
+# version: "3.8"
+
+services:
+    app:
+        build: .
+        ports:
+            - "7000:7000"
+        depends_on:
+            - db
+        environment:
+            - DATABASE_URL=postgresql://adminAgenda:admin1305@db:5432/agendame
+            - JWT_SECRET="MySuperSecretKey"
+            - NODE_ENV="production"
+        restart: always
+
+    db:
+        image: postgres:14
+        ports:
+            - "5433:5432"
+        environment:
+            - POSTGRES_USER=adminAgenda
+            - POSTGRES_PASSWORD=admin1305
+            - POSTGRES_DB=agendame
+volumes:
+    postgres_data:
