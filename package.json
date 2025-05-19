@@ -4,8 +4,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "dev": "nodemon src/index.js",
-        "start": "node src/index.js",
+        "dev": "nodemon index.js",
+        "start": "node index.js",
         "test": "dotenv -e .env.test node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles",
         "build": "echo 'No build step required for Node.js app'",
         "migrate:prod": "prisma migrate deploy",
