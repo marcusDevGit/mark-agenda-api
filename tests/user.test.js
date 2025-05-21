@@ -5,7 +5,7 @@ import prisma from './setup.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
-// Mock manual do nodemailer
+// Mock manual do nodemailerq
 import nodemailer from 'nodemailer';
 
 // Mock simples sem usar jest.fn()

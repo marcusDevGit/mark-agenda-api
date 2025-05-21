@@ -1,3 +1,4 @@
+console.log('Arquivo app.js carregado!');
 import express from 'express';
 import cors from 'cors';
 import appointmentsRouter from './routes/appointments.route.js';
@@ -11,6 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//rota raiz
+app.get('/', (req, res) => {
+    res.send('API Mark Agenda está rodando!')
+});
 
 //rota de ageendamento
 app.use('/api/routes/appointments', appointmentsRouter);
@@ -18,6 +23,12 @@ app.use('/api/routes/appointments', appointmentsRouter);
 app.use("/api/routes/user", userRouter);
 app.use("/api/routes/teams", teamsRouter);
 app.use("/api/routes/plans", plansRouter);
+
+
+// ROTA CATCH-ALL PARA DEBUG
+app.use((req, res, next) => {
+    res.status(404).send('Rota não encontrada pelo Express!');
+});
 
 
 export default app;
