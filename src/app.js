@@ -14,7 +14,26 @@ app.use(express.json());
 
 //rota raiz
 app.get('/', (req, res) => {
-    res.send('API Mark Agenda está rodando!')
+    res.send(`
+        <h2>Bem-vindo à API Mark Agenda!</h2>
+        <p>Use os seguintes endpoints para acessar as funcionalidades:</p>
+        <ul>
+            <li><b>POST</b> /api/routes/user/register – Registrar novo usuário</li>
+            <li><b>POST</b> /api/routes/user/login – Login de usuário</li>
+            <li><b>GET</b> /api/routes/user/profile – Perfil do usuário (autenticado)</li>
+            <li><b>POST</b> /api/routes/user/forgot-password – Recuperação de senha</li>
+            <li><b>POST</b> /api/routes/user/reset-password – Redefinir senha</li>
+            <li><b>POST</b> /api/routes/appointments – Criar agendamento</li>
+            <li><b>GET</b> /api/routes/appointments/user/:userId – Listar agendamentos do usuário</li>
+            <li><b>DELETE</b> /api/routes/appointments/:id – Excluir agendamento</li>
+            <li><b>GET</b> /api/routes/plans – Listar planos</li>
+            <li><b>POST</b> /api/routes/plans/:id/subscribe – Assinar plano</li>
+            <li><b>POST</b> /api/routes/plans/subscriptions/:id/cancel – Cancelar assinatura</li>
+            <li><b>POST</b> /api/routes/teams – Criar time</li>
+            <li><b>GET</b> /api/routes/teams – Listar times</li>
+        </ul>
+        <p>Consulte a documentação completa no README.md do projeto.</p>
+    `)
 });
 
 //rota de ageendamento
