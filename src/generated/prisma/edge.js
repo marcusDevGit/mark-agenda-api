@@ -5,27 +5,27 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 
 const {
-    PrismaClientKnownRequestError,
-    PrismaClientUnknownRequestError,
-    PrismaClientRustPanicError,
-    PrismaClientInitializationError,
-    PrismaClientValidationError,
-    getPrismaClient,
-    sqltag,
-    empty,
-    join,
-    raw,
-    skip,
-    Decimal,
-    Debug,
-    objectEnumValues,
-    makeStrictEnum,
-    Extensions,
-    warnOnce,
-    defineDmmfProperty,
-    Public,
-    getRuntime,
-    createParam,
+  PrismaClientKnownRequestError,
+  PrismaClientUnknownRequestError,
+  PrismaClientRustPanicError,
+  PrismaClientInitializationError,
+  PrismaClientValidationError,
+  getPrismaClient,
+  sqltag,
+  empty,
+  join,
+  raw,
+  skip,
+  Decimal,
+  Debug,
+  objectEnumValues,
+  makeStrictEnum,
+  Extensions,
+  warnOnce,
+  defineDmmfProperty,
+  Public,
+  getRuntime,
+  createParam,
 } = require('./runtime/edge.js')
 
 
@@ -39,8 +39,8 @@ exports.$Enums = {}
  * Query Engine version: 3cff47a7f5d65c3ea74883f1d736e41d68ce91ed
  */
 Prisma.prismaVersion = {
-    client: "6.7.0",
-    engine: "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed"
+  client: "6.7.0",
+  engine: "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -73,9 +73,9 @@ Prisma.JsonNull = objectEnumValues.instances.JsonNull
 Prisma.AnyNull = objectEnumValues.instances.AnyNull
 
 Prisma.NullTypes = {
-    DbNull: objectEnumValues.classes.DbNull,
-    JsonNull: objectEnumValues.classes.JsonNull,
-    AnyNull: objectEnumValues.classes.AnyNull
+  DbNull: objectEnumValues.classes.DbNull,
+  JsonNull: objectEnumValues.classes.JsonNull,
+  AnyNull: objectEnumValues.classes.AnyNull
 }
 
 
@@ -86,216 +86,215 @@ Prisma.NullTypes = {
  * Enums
  */
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
-    ReadUncommitted: 'ReadUncommitted',
-    ReadCommitted: 'ReadCommitted',
-    RepeatableRead: 'RepeatableRead',
-    Serializable: 'Serializable'
+  ReadUncommitted: 'ReadUncommitted',
+  ReadCommitted: 'ReadCommitted',
+  RepeatableRead: 'RepeatableRead',
+  Serializable: 'Serializable'
 });
 
 exports.Prisma.UserScalarFieldEnum = {
-    id: 'id',
-    name: 'name',
-    email: 'email',
-    password: 'password',
-    role: 'role',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  password: 'password',
+  role: 'role',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {
-    id: 'id',
-    name: 'name',
-    description: 'description',
-    duration: 'duration',
-    price: 'price',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  duration: 'duration',
+  price: 'price',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.AppointmentScalarFieldEnum = {
-    id: 'id',
-    date: 'date',
-    notes: 'notes',
-    userId: 'userId',
-    serviceId: 'serviceId',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  date: 'date',
+  notes: 'notes',
+  userId: 'userId',
+  serviceId: 'serviceId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.PasswordResetTokenScalarFieldEnum = {
-    id: 'id',
-    token: 'token',
-    userId: 'userId',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt',
-    expires: 'expires'
+  id: 'id',
+  token: 'token',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  expires: 'expires'
 };
 
 exports.Prisma.TeamScalarFieldEnum = {
-    id: 'id',
-    name: 'name',
-    description: 'description',
-    ownerId: 'ownerId',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  ownerId: 'ownerId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.TeamMemberScalarFieldEnum = {
-    id: 'id',
-    teamId: 'teamId',
-    userId: 'userId',
-    role: 'role',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  teamId: 'teamId',
+  userId: 'userId',
+  role: 'role',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.TeamInviteScalarFieldEnum = {
-    id: 'id',
-    teamId: 'teamId',
-    email: 'email',
-    token: 'token',
-    status: 'status',
-    expiresAt: 'expiresAt',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  teamId: 'teamId',
+  email: 'email',
+  token: 'token',
+  status: 'status',
+  expiresAt: 'expiresAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.PlanScalarFieldEnum = {
-    id: 'id',
-    name: 'name',
-    description: 'description',
-    price: 'price',
-    interval: 'interval',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  price: 'price',
+  interval: 'interval',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.PlanFeatureScalarFieldEnum = {
-    id: 'id',
-    planId: 'planId',
-    name: 'name',
-    description: 'description',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  planId: 'planId',
+  name: 'name',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SubscriptionScalarFieldEnum = {
-    id: 'id',
-    userId: 'userId',
-    planId: 'planId',
-    status: 'status',
-    startDate: 'startDate',
-    endDate: 'endDate',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+  id: 'id',
+  userId: 'userId',
+  planId: 'planId',
+  status: 'status',
+  startDate: 'startDate',
+  endDate: 'endDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {
-    asc: 'asc',
-    desc: 'desc'
+  asc: 'asc',
+  desc: 'desc'
 };
 
 exports.Prisma.QueryMode = {
-    default: 'default',
-    insensitive: 'insensitive'
+  default: 'default',
+  insensitive: 'insensitive'
 };
 
 exports.Prisma.NullsOrder = {
-    first: 'first',
-    last: 'last'
+  first: 'first',
+  last: 'last'
 };
 exports.Role = exports.$Enums.Role = {
-    ADMIN: 'ADMIN',
-    USER: 'USER'
+  ADMIN: 'ADMIN',
+  USER: 'USER'
 };
 
 exports.TeamRole = exports.$Enums.TeamRole = {
-    OWNER: 'OWNER',
-    ADMIN: 'ADMIN',
-    MEMBER: 'MEMBER'
+  OWNER: 'OWNER',
+  ADMIN: 'ADMIN',
+  MEMBER: 'MEMBER'
 };
 
 exports.InviteStatus = exports.$Enums.InviteStatus = {
-    PENDING: 'PENDING',
-    ACCEPTED: 'ACCEPTED',
-    REJECTED: 'REJECTED',
-    EXPIRED: 'EXPIRED'
+  PENDING: 'PENDING',
+  ACCEPTED: 'ACCEPTED',
+  REJECTED: 'REJECTED',
+  EXPIRED: 'EXPIRED'
 };
 
 exports.PlanInterval = exports.$Enums.PlanInterval = {
-    MONTHLY: 'MONTHLY',
-    YEARLY: 'YEARLY'
+  MONTHLY: 'MONTHLY',
+  YEARLY: 'YEARLY'
 };
 
 exports.SubscriptionStatus = exports.$Enums.SubscriptionStatus = {
-    ACTIVE: 'ACTIVE',
-    CANCELED: 'CANCELED',
-    EXPIRED: 'EXPIRED'
+  ACTIVE: 'ACTIVE',
+  CANCELED: 'CANCELED',
+  EXPIRED: 'EXPIRED'
 };
 
 exports.Prisma.ModelName = {
-    User: 'User',
-    Service: 'Service',
-    Appointment: 'Appointment',
-    passwordResetToken: 'passwordResetToken',
-    Team: 'Team',
-    TeamMember: 'TeamMember',
-    TeamInvite: 'TeamInvite',
-    Plan: 'Plan',
-    PlanFeature: 'PlanFeature',
-    Subscription: 'Subscription'
+  User: 'User',
+  Service: 'Service',
+  Appointment: 'Appointment',
+  passwordResetToken: 'passwordResetToken',
+  Team: 'Team',
+  TeamMember: 'TeamMember',
+  TeamInvite: 'TeamInvite',
+  Plan: 'Plan',
+  PlanFeature: 'PlanFeature',
+  Subscription: 'Subscription'
 };
 /**
  * Create the Client
  */
 const config = {
-    "generator": {
-        "name": "client",
-        "provider": {
-            "fromEnvVar": null,
-            "value": "prisma-client-js"
-        },
-        "output": {
-            "value": "/home/marcus/projetos/mark-agenda/mark-agenda-api/src/generated/prisma",
-            "fromEnvVar": null
-        },
-        "config": {
-            "engineType": "library"
-        },
-        "binaryTargets": [
-            {
-                "fromEnvVar": null,
-                "value": "debian-openssl-1.1.x",
-                "native": true
-            }
-        ],
-        "previewFeatures": [],
-        "sourceFilePath": "/home/marcus/projetos/mark-agenda/mark-agenda-api/prisma/schema.prisma",
-        "isCustomOutput": true
+  "generator": {
+    "name": "client",
+    "provider": {
+      "fromEnvVar": null,
+      "value": "prisma-client-js"
     },
-    "relativeEnvPaths": {
-        "rootEnvPath": null,
-        "schemaEnvPath": "../../../.env"
+    "output": {
+      "value": "/home/marcus/projetos/mark-agenda/mark-agenda-api/src/generated/prisma",
+      "fromEnvVar": null
     },
-    "relativePath": "../../../prisma",
-    "clientVersion": "6.7.0",
-    "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
-    "datasourceNames": [
-        "db"
+    "config": {
+      "engineType": "library"
+    },
+    "binaryTargets": [
+      {
+        "fromEnvVar": null,
+        "value": "debian-openssl-1.1.x",
+        "native": true
+      }
     ],
-    "activeProvider": "postgresql",
-    "postinstall": false,
-    "inlineDatasources": {
-        "db": {
-            "url": {
-                "fromEnvVar": "DATABASE_URL",
-                "value": "postgresql://adminAgenda:admin1305@localhost:5432/agendame"
-            }
-        }
-    },
-    "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id                 Int                 @id @default(autoincrement())\n  name               String\n  email              String              @unique\n  password           String\n  role               Role                @default(USER)\n  createdAt          DateTime            @default(now())\n  updatedAt          DateTime            @updatedAt\n  appointments       Appointment[]\n  subscription       Subscription[]\n  ownedTeams         Team[]              @relation(\"TeamOwner\")\n  teamMemberships    TeamMember[]\n  passwordResetToken passwordResetToken?\n}\n\nmodel Service {\n  id           Int           @id @default(autoincrement())\n  name         String\n  description  String?\n  duration     Int\n  price        Float\n  createdAt    DateTime      @default(now())\n  updatedAt    DateTime      @updatedAt\n  appointments Appointment[]\n}\n\nmodel Appointment {\n  id        Int      @id @default(autoincrement())\n  date      DateTime\n  notes     String?\n  userId    Int\n  serviceId Int\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  service   Service  @relation(fields: [serviceId], references: [id])\n  user      User     @relation(fields: [userId], references: [id])\n}\n\nmodel passwordResetToken {\n  id        Int      @id @default(autoincrement())\n  token     String   @unique\n  userId    Int      @unique\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  expires   DateTime @default(now())\n  user      User     @relation(fields: [userId], references: [id])\n}\n\nmodel Team {\n  id          Int          @id @default(autoincrement())\n  name        String\n  description String?\n  ownerId     Int\n  createdAt   DateTime     @default(now())\n  updatedAt   DateTime     @updatedAt\n  owner       User         @relation(\"TeamOwner\", fields: [ownerId], references: [id])\n  invites     TeamInvite[]\n  members     TeamMember[]\n}\n\nmodel TeamMember {\n  id        Int      @id @default(autoincrement())\n  teamId    Int\n  userId    Int\n  role      TeamRole @default(MEMBER)\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  team      Team     @relation(fields: [teamId], references: [id])\n  user      User     @relation(fields: [userId], references: [id])\n\n  @@unique([teamId, userId])\n}\n\nmodel TeamInvite {\n  id        Int          @id @default(autoincrement())\n  teamId    Int\n  email     String\n  token     String       @unique\n  status    InviteStatus @default(PENDING)\n  expiresAt DateTime\n  createdAt DateTime     @default(now())\n  updatedAt DateTime     @updatedAt\n  team      Team         @relation(fields: [teamId], references: [id])\n}\n\nmodel Plan {\n  id            Int            @id @default(autoincrement())\n  name          String\n  description   String?\n  price         Float\n  interval      PlanInterval   @default(MONTHLY)\n  createdAt     DateTime       @default(now())\n  updatedAt     DateTime       @updatedAt\n  features      PlanFeature[]\n  subscriptions Subscription[]\n}\n\nmodel PlanFeature {\n  id          Int      @id @default(autoincrement())\n  planId      Int\n  name        String\n  description String?\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n  plan        Plan     @relation(fields: [planId], references: [id])\n}\n\nmodel Subscription {\n  id        Int                @id @default(autoincrement())\n  userId    Int\n  planId    Int\n  status    SubscriptionStatus @default(ACTIVE)\n  startDate DateTime\n  endDate   DateTime?\n  createdAt DateTime           @default(now())\n  updatedAt DateTime           @updatedAt\n  plan      Plan               @relation(fields: [planId], references: [id])\n  user      User               @relation(fields: [userId], references: [id])\n}\n\nenum Role {\n  ADMIN\n  USER\n}\n\nenum TeamRole {\n  OWNER\n  ADMIN\n  MEMBER\n}\n\nenum InviteStatus {\n  PENDING\n  ACCEPTED\n  REJECTED\n  EXPIRED\n}\n\nenum PlanInterval {\n  MONTHLY\n  YEARLY\n}\n\nenum SubscriptionStatus {\n  ACTIVE\n  CANCELED\n  EXPIRED\n}\n",
-    "inlineSchemaHash": "9a10fd2241d672a603c5e39e47650fbdcc4cbb94d81c3769be8d424a62b1ea12",
-    "copyEngine": true
+    "previewFeatures": [],
+    "sourceFilePath": "/home/marcus/projetos/mark-agenda/mark-agenda-api/prisma/schema.prisma",
+    "isCustomOutput": true
+  },
+  "relativeEnvPaths": {
+    "rootEnvPath": null,
+    "schemaEnvPath": "../../../.env"
+  },
+  "relativePath": "../../../prisma",
+  "clientVersion": "6.7.0",
+  "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
+  "datasourceNames": [
+    "db"
+  ],
+  "activeProvider": "postgresql",
+  "inlineDatasources": {
+    "db": {
+      "url": {
+        "fromEnvVar": "DATABASE_URL",
+        "value": "postgresql://adminAgenda:admin1305@localhost:5432/agendame"
+      }
+    }
+  },
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id                 Int                 @id @default(autoincrement())\n  name               String\n  email              String              @unique\n  password           String\n  role               Role                @default(USER)\n  createdAt          DateTime            @default(now())\n  updatedAt          DateTime            @updatedAt\n  appointments       Appointment[]\n  subscription       Subscription[]\n  ownedTeams         Team[]              @relation(\"TeamOwner\")\n  teamMemberships    TeamMember[]\n  passwordResetToken passwordResetToken?\n}\n\nmodel Service {\n  id           Int           @id @default(autoincrement())\n  name         String\n  description  String?\n  duration     Int\n  price        Float\n  createdAt    DateTime      @default(now())\n  updatedAt    DateTime      @updatedAt\n  appointments Appointment[]\n}\n\nmodel Appointment {\n  id        Int      @id @default(autoincrement())\n  date      DateTime\n  notes     String?\n  userId    Int\n  serviceId Int\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  service   Service  @relation(fields: [serviceId], references: [id])\n  user      User     @relation(fields: [userId], references: [id])\n}\n\nmodel passwordResetToken {\n  id        Int      @id @default(autoincrement())\n  token     String   @unique\n  userId    Int      @unique\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  expires   DateTime @default(now())\n  user      User     @relation(fields: [userId], references: [id])\n}\n\nmodel Team {\n  id          Int          @id @default(autoincrement())\n  name        String\n  description String?\n  ownerId     Int\n  createdAt   DateTime     @default(now())\n  updatedAt   DateTime     @updatedAt\n  owner       User         @relation(\"TeamOwner\", fields: [ownerId], references: [id])\n  invites     TeamInvite[]\n  members     TeamMember[]\n}\n\nmodel TeamMember {\n  id        Int      @id @default(autoincrement())\n  teamId    Int\n  userId    Int\n  role      TeamRole @default(MEMBER)\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  team      Team     @relation(fields: [teamId], references: [id])\n  user      User     @relation(fields: [userId], references: [id])\n\n  @@unique([teamId, userId])\n}\n\nmodel TeamInvite {\n  id        Int          @id @default(autoincrement())\n  teamId    Int\n  email     String\n  token     String       @unique\n  status    InviteStatus @default(PENDING)\n  expiresAt DateTime\n  createdAt DateTime     @default(now())\n  updatedAt DateTime     @updatedAt\n  team      Team         @relation(fields: [teamId], references: [id])\n}\n\nmodel Plan {\n  id            Int            @id @default(autoincrement())\n  name          String\n  description   String?\n  price         Float\n  interval      PlanInterval   @default(MONTHLY)\n  createdAt     DateTime       @default(now())\n  updatedAt     DateTime       @updatedAt\n  features      PlanFeature[]\n  subscriptions Subscription[]\n}\n\nmodel PlanFeature {\n  id          Int      @id @default(autoincrement())\n  planId      Int\n  name        String\n  description String?\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n  plan        Plan     @relation(fields: [planId], references: [id])\n}\n\nmodel Subscription {\n  id        Int                @id @default(autoincrement())\n  userId    Int\n  planId    Int\n  status    SubscriptionStatus @default(ACTIVE)\n  startDate DateTime\n  endDate   DateTime?\n  createdAt DateTime           @default(now())\n  updatedAt DateTime           @updatedAt\n  plan      Plan               @relation(fields: [planId], references: [id])\n  user      User               @relation(fields: [userId], references: [id])\n}\n\nenum Role {\n  ADMIN\n  USER\n}\n\nenum TeamRole {\n  OWNER\n  ADMIN\n  MEMBER\n}\n\nenum InviteStatus {\n  PENDING\n  ACCEPTED\n  REJECTED\n  EXPIRED\n}\n\nenum PlanInterval {\n  MONTHLY\n  YEARLY\n}\n\nenum SubscriptionStatus {\n  ACTIVE\n  CANCELED\n  EXPIRED\n}\n",
+  "inlineSchemaHash": "9a10fd2241d672a603c5e39e47650fbdcc4cbb94d81c3769be8d424a62b1ea12",
+  "copyEngine": true
 }
 config.dirname = '/'
 
@@ -305,13 +304,13 @@ config.engineWasm = undefined
 config.compilerWasm = undefined
 
 config.injectableEdgeEnv = () => ({
-    parsed: {
-        DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.DATABASE_URL || undefined
-    }
+  parsed: {
+    DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.DATABASE_URL || undefined
+  }
 })
 
 if (typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined) {
-    Debug.enable(typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined)
+  Debug.enable(typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined)
 }
 
 const PrismaClient = getPrismaClient(config)
