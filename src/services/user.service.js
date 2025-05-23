@@ -38,17 +38,19 @@ const login = async ({ email, password }) => {
 
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '5h' });
 
-    return token;
+    return {
+        token,
+        user: {
+            id: user.id,
+            name: user.name,
+            email: user.email
+        }
+
+    }
 };
 
-const getProfile = async () => {
-    return await prisma.user.findUnique({
-        select: {
-            id: true,
-            name: true,
-            email: true,
-        },
-    });
+const getProfile = async (userId) => {
+    return getUserById(userId);
 };
 const getUserById = async (id) => {
     const user = await prisma.user.findUnique({
@@ -95,7 +97,7 @@ const forgotPassword = async (email) => {
             subject: "Redefinição de senha",
             html: `<p>Clique no link para redefinir sua senha: <a href="${resetLink}">${resetLink}</a></p>`
         });
-        
+
         return { message: 'Email de recuperação enviado' };
     } catch (error) {
         console.error('Erro no forgotPassword:', error);

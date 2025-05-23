@@ -9,7 +9,10 @@ import plansRouter from './routes/plans.route.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.URL_APP_FRONT,
+    credentials: true
+}));
 app.use(express.json());
 
 //rota raiz

@@ -11,8 +11,11 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        const token = await UserService.login(req.body);
-        res.status(200).json({ token });
+        const { token, user } = await UserService.login(req.body);
+        res.status(200).json({
+            token,
+            user
+        });
     } catch (error) {
         res.status(401).json({ error: error.message });
     }
@@ -20,7 +23,7 @@ const login = async (req, res) => {
 
 const getProfile = async (req, res) => {
     try {
-        const user = await UserService.getProfile();
+        const user = await UserService.getProfile(req.user.id);
         res.status(200).json(user);
     } catch (error) {
         res.status(401).json({ error: error.message });
@@ -28,7 +31,7 @@ const getProfile = async (req, res) => {
 };
 const getUserById = async (req, res) => {
     try {
-        const user = await UserService.getUserById(req.params.id);
+        const user = await UserService.getUserById();
         res.status(200).json(user);
     } catch (error) {
         res.status(404).json({ error: error.message });
